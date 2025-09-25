@@ -2,11 +2,10 @@ package main
 
 import (
 	"fmt"
-	"jvmGo/ch01/cmd"
 )
 
 func main() {
-	cmd := cmd.ParseCmd()
+	cmd := ParseCmd()
 	if cmd.VersionFlag {
 		fmt.Println("version 0.0.1")
 	} else if cmd.HelpFlag || cmd.Class == "" {
@@ -15,7 +14,7 @@ func main() {
 		startJVM(cmd)
 	}
 }
-func startJVM(cmd *cmd.Cmd) {
+func startJVM(cmd *Cmd) {
 	fmt.Printf("classpath:%s class:%s args:%v\n",
 		cmd.CpOption, cmd.Class, cmd.Args)
 }
