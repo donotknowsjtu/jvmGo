@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(move cmd.go cmdcmd.go)",
+      "Bash(mv:*)",
+      "Bash(go build:*)",
+      "Bash(./ch01.exe:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
